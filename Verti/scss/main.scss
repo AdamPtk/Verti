@@ -1,7 +1,142 @@
 @import "reset";
 @import "media";
+@import "grid";
+@import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Open+Sans:wght@300;400;700&display=swap');
+@import "logo";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Open Sans', sans-serif;
+    background: $bg-color;
+    color: $main-text-color;
 }
+
+header {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(sm) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.center {
+    display: flex;
+    @include breakpoint(xs) {
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    .menu-btn {
+        display: none;
+    }
+    #menu-btn{
+        &:checked {
+            ~ ul {
+                display: block;
+            }
+        }
+    }
+    .menu-icon {
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 2rem;
+        opacity: 0.7;
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+    ul {
+        display: none;
+        @include breakpoint(sm) {
+            display: flex;
+        }
+        li {
+            margin: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: $main-text-color;
+            font-weight: 600;
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $secondary-color;
+    border-radius: $border-radius;
+    padding: 1em;
+    @include breakpoint(sm) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3em;
+    }
+    .greeting {
+        width: 100%;
+        text-align: center;
+        h1 {
+            font-size: 2em;
+            line-height: 1.5em;
+            font-weight: 700;
+            @include breakpoint(md) {
+                font-size: 3.5em;
+                line-height: 1.5em;
+                font-weight: 700;
+            }
+        }
+        h2 {
+            font-size: 1.5em;
+            line-height: 1.5em;
+            font-weight: 300;
+            @include breakpoint(md) {
+                font-size: 2.75em;
+                line-height: 1.5em;
+                font-weight: 300;
+            }
+        }
+    }
+    .buttons {
+        width: 100%;
+        margin: 2em 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        a {
+            width: 100%;
+            line-height: 2em;
+            @include btn(1.25em, $main-btn-color, 0.5em 0);
+            &:last-child {
+                background: $bg-color;
+                color: $main-text-color;
+                margin-top: 1em;
+            }
+            @include breakpoint(sm) {
+                width: 10em;
+                align-self: flex-end;
+            }
+            @include breakpoint(md) {
+                font-size: 2em;
+            }
+        }
+    }
+}
+

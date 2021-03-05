@@ -44,7 +44,251 @@ table {
   border-spacing: 0;
 }
 
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  min-height: 1px;
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  min-height: 1px;
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  min-height: 1px;
+  width: 25%;
+}
+
+.col-4 {
+  min-height: 1px;
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  min-height: 1px;
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  min-height: 1px;
+  width: 50%;
+}
+
+.col-7 {
+  min-height: 1px;
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  min-height: 1px;
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  min-height: 1px;
+  width: 75%;
+}
+
+.col-10 {
+  min-height: 1px;
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  min-height: 1px;
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  min-height: 1px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  [class^=col-] {
+    width: 100%;
+  }
+}
+
+.logo {
+  font-family: "Oleo Script", cursive;
+  background: #ff4486;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 400;
+  padding: 0.25em 0.2em 0.25em 0.2em;
+  font-size: 3.25em;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
+  background: #E4E4E4;
+  color: #444444;
+}
+
+header {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.center {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+}
+#nav .menu-btn {
+  display: none;
+}
+#nav #menu-btn:checked ~ ul {
+  display: block;
+}
+#nav .menu-icon {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+  opacity: 0.7;
+}
+@media (min-width: 768px) {
+  #nav .menu-icon {
+    display: none;
+  }
+}
+#nav ul {
+  display: none;
+}
+@media (min-width: 768px) {
+  #nav ul {
+    display: flex;
+  }
+}
+#nav ul li {
+  margin: 10px;
+}
+#nav ul a {
+  text-decoration: none;
+  color: #444444;
+  font-weight: 600;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 6px;
+  padding: 1em;
+}
+@media (min-width: 768px) {
+  .banner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em;
+  }
+}
+.banner .greeting {
+  width: 100%;
+  text-align: center;
+}
+.banner .greeting h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .banner .greeting h1 {
+    font-size: 3.5em;
+    line-height: 1.5em;
+    font-weight: 700;
+  }
+}
+.banner .greeting h2 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+@media (min-width: 992px) {
+  .banner .greeting h2 {
+    font-size: 2.75em;
+    line-height: 1.5em;
+    font-weight: 300;
+  }
+}
+.banner .buttons {
+  width: 100%;
+  margin: 2em 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.banner .buttons a {
+  width: 100%;
+  line-height: 2em;
+  font-size: 1.25em;
+  background: #1691C3;
+  border-radius: 6px;
+  padding: 0.5em 0;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+}
+.banner .buttons a:last-child {
+  background: #E4E4E4;
+  color: #444444;
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  .banner .buttons a {
+    width: 10em;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 992px) {
+  .banner .buttons a {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
