@@ -1,8 +1,11 @@
+@import "variables";
+@import "media";
+
 .container {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 2em;
 }
 .row {
     display: flex;
@@ -14,12 +17,23 @@ $column-base-width: 100% / $columns;
     .col-#{$i} {
       min-height: 1px;
       width: $column-base-width * $i;
-      //border: 1px solid black;
     }
 }
   
-[class^="col-"]{
-    @include breakpoint(xs){
+[class*="col-"]{
+    @include breakpoint(xs) {
       width: 100%;
+      margin-bottom: 2em;
+    }
+    @include breakpoint(sm) {
+      @media  (max-width: 991px) {
+        width: 100%;
+        max-width: 767px;
+        margin: 0 auto;
+        margin-bottom: 2em;
+      }
+    }
+    @include breakpoint(md) {
+      padding-right: $strategic-padding;
     }
 }

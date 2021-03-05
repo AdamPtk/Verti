@@ -51,7 +51,7 @@ header {
     }
     .menu-icon {
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         top: 10px;
         left: 10px;
         font-size: 2rem;
@@ -78,6 +78,7 @@ header {
 
 .banner {
     width: 100%;
+    margin-bottom: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,4 +140,38 @@ header {
         }
     }
 }
+
+.features .container {
+    padding: 0;
+    @include breakpoint(md) {
+        width: calc(100% + 2em); //$strategic-padding in variables used in grid partial to align the container (temporary solution)
+    }
+}
+
+.features {
+    .box {
+        height: 100%;
+        background: $secondary-color;
+        border-radius: $border-radius;
+        img {
+            @include img;
+        }
+        .text {
+            padding: 3em 2em;
+            h1 {
+                font-size: 1.3em;
+                font-weight: 700;
+                line-height: 1.5em;
+            }
+            h2 {
+                margin: 0.25em 0 2em 0;
+            }
+            p {
+                line-height: 2em;
+            }
+        }
+    }
+}
+
+
 
