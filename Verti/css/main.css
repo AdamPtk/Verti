@@ -116,26 +116,6 @@ table {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  [class*=col-] {
-    width: 100%;
-    margin-bottom: 2em;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  [class*=col-] {
-    width: 100%;
-    max-width: 767px;
-    margin: 0 auto;
-    margin-bottom: 2em;
-  }
-}
-@media (min-width: 992px) {
-  [class*=col-] {
-    padding-right: 2em;
-  }
-}
-
 .logo {
   font-family: "Oleo Script", cursive;
   background: #ff4486;
@@ -289,6 +269,7 @@ header {
   display: block;
   color: #fff;
   font-weight: 700;
+  text-align: center;
 }
 .banner .buttons a:last-child {
   background: #E4E4E4;
@@ -316,6 +297,25 @@ header {
   }
 }
 
+@media (max-width: 767px) {
+  .features [class*=col-] {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .features [class*=col-] {
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .features [class*=col-] {
+    padding-right: 2em;
+  }
+}
 .features .box {
   height: 100%;
   background: #fff;
@@ -339,5 +339,101 @@ header {
 }
 .features .box .text p {
   line-height: 2em;
+}
+
+main {
+  background: #fff;
+  margin: 3em 0;
+}
+main .wrapper {
+  padding: 5em 0;
+}
+@media (max-width: 1199px) {
+  main .wrapper {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 1199px) {
+  main [class*=col-] {
+    width: 100%;
+  }
+}
+@media (max-width: 1199px) {
+  main .sidebar {
+    width: calc(100% + 1em);
+  }
+}
+main .sidebar h3 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+main .sidebar [class*=col-] {
+  width: 50%;
+}
+main .sidebar .images {
+  margin-bottom: 2em;
+}
+main .sidebar .images > div {
+  padding: 0 1em 1em 0;
+}
+main .sidebar .images img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+main .sidebar > a {
+  font-size: 1.4em;
+  background: #1691C3;
+  border-radius: 6px;
+  padding: 0.8em 0;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 1rem;
+}
+@media (min-width: 1200px) {
+  main .sidebar > a {
+    display: inline-block;
+    padding: 0.8em 2em;
+  }
+}
+main .content h2 {
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+main .content p {
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+main .content a {
+  font-size: 1.4em;
+  background: #1691C3;
+  border-radius: 6px;
+  padding: 0.8em 0;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  main .content {
+    padding-bottom: 4em;
+    margin-bottom: 4em;
+    border-bottom: 1px solid #444444;
+  }
+}
+@media (min-width: 1200px) {
+  main .content {
+    margin-left: 2em;
+  }
+  main .content a {
+    display: inline-block;
+    padding: 0.8em 2em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

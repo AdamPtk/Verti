@@ -20,20 +20,20 @@ $column-base-width: 100% / $columns;
     }
 }
   
-[class*="col-"]{
-    @include breakpoint(xs) {
-      width: 100%;
-      margin-bottom: 2em;
-    }
-    @include breakpoint(sm) {
-      @media  (max-width: 991px) {
-        width: 100%;
-        max-width: 767px;
-        margin: 0 auto;
-        margin-bottom: 2em;
-      }
-    }
-    @include breakpoint(md) {
-      padding-right: $strategic-padding;
-    }
-}
+// [class*="col-"]{
+//     @include breakpoint(xs) {
+//       width: 100%;
+//       margin-bottom: 2em;
+//     }
+//     @include breakpoint(sm) {
+//       @media  (max-width: 991px) {
+//         width: 100%;
+//         max-width: 767px;
+//         margin: 0 auto;
+//         margin-bottom: 2em;
+//       }
+//     }
+//     @include breakpoint(md) {
+//       padding-right: $strategic-padding;
+//     }
+// }
