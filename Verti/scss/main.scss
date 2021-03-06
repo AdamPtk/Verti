@@ -265,5 +265,54 @@ main {
     }
 }
 
+footer {
+    section {
+        padding-bottom: 3em;
+        margin-bottom: 3em;
+        border-bottom: 1px solid $main-text-color;
+        h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 1em;
+        }
+        a {
+            @include footer-links;
+        }
+    }
+    .contact {
+        ul {
+            display: flex;
+            list-style: none;
+            margin-bottom: 1em;
+            li{
+                padding-right: 1rem;
+                font-size: 2em;
+            }
+        }
+        p {
+            line-height: 1.8em;
+        }
+    }
+    > p {
+        margin-bottom: 3em;
+    }
+    @include breakpoint(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        section {
+            border: none;
+            width: 50%;
+        }
+        > p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @include breakpoint(lg) {
+        section {
+            width: 25%;
+        }
+    }
+}
 
 

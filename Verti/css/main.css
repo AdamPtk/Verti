@@ -436,4 +436,54 @@ main .content a {
     padding: 0.8em 2em;
   }
 }
+
+footer section {
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+  border-bottom: 1px solid #444444;
+}
+footer section h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+footer section a {
+  color: #444444;
+  display: block;
+  line-height: 1.8em;
+}
+footer .contact ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 1em;
+}
+footer .contact ul li {
+  padding-right: 1rem;
+  font-size: 2em;
+}
+footer .contact p {
+  line-height: 1.8em;
+}
+footer > p {
+  margin-bottom: 3em;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer section {
+    border: none;
+    width: 50%;
+  }
+  footer > p {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  footer section {
+    width: 25%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
